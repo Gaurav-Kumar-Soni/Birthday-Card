@@ -13,7 +13,7 @@ class GreetCardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_greet_card)
-        val name = intent.getStringExtra(Name_Extra)
+        val name = intent.getStringExtra("PersonName")
 
         val wishTextView:TextView = findViewById(R.id.wishTextView)
         wishTextView.text = "Happy Birthday $name"
