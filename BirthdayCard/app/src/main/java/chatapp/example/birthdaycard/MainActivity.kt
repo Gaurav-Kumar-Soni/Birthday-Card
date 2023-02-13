@@ -13,10 +13,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val cardMakerBtn:Button = findViewById(R.id.btnCardMaker)
         val inputName:EditText = findViewById(R.id.inputName)
-        val name = inputName.text.toString()
+
         cardMakerBtn.setOnClickListener{
+            val name = inputName.text.toString()
             val intent = Intent(this, GreetCardActivity::class.java)
-            intent.putExtra(GreetCardActivity.Name_Extra, name)
+            intent.putExtra("PersonName", name)
             startActivity(intent)
         }
 
